@@ -20,6 +20,8 @@ jobs:
             php: 8.1
           - laravel: 13.*
             php: 8.1
+          - laravel: 13.*
+            php: 8.2
 
     name: P${{ matrix.php }} - L${{ matrix.laravel }} - ${{ matrix.dependency-version }}
 
@@ -41,4 +43,3 @@ jobs:
 
       - name: Execute tests
         run: vendor/bin/phpunit
-# workflow touch to trigger Actions on existing PR branch
